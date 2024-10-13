@@ -30,5 +30,5 @@ bin/
 .DS_Store
 *.iml
 
-/META-INF/
-*.MF
+# Ignore MANIFEST.MF in any build directories
+*/META-INF/MANIFEST.MF
