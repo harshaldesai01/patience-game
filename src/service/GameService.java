@@ -16,6 +16,7 @@ import util.CommandType;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
@@ -141,10 +142,17 @@ public class GameService {
      * @param sourcePile The source pile from which cards are removed.
      */
     private void moveCardsToTargetPile(Pile targetPile, Stack<Card> cardsToMove, Pile sourcePile) {
+        List<Card> cardsMoved = new ArrayList<>(); // To store the cards being moved
+
         while(!cardsToMove.isEmpty()){
-            targetPile.addCard(cardsToMove.pop());
-            scoreManager.updateScore(sourcePile, targetPile);
+            Card movedCard = cardsToMove.pop();
+            targetPile.addCard(movedCard);
+            cardsMoved.add(movedCard);
         }
+
+        // Update the score with the source, target, and cards moved
+        scoreManager.updateScore(sourcePile, targetPile, cardsMoved);
+
         // flip next card in the lane
         if(sourcePile instanceof Lane && !sourcePile.isEmpty()) {
             ((Lane) sourcePile).faceUpTopCard();

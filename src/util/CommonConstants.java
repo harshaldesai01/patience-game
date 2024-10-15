@@ -23,4 +23,5 @@ public final class CommonConstants {
     public static final int SCORE_MOVE_LANE_TO_FOUNDATION = 20;
     public static final int SCORE_MOVE_BETWEEN_LANES = 5;
     public static final int NUMBER_OF_LANES = 7;
+    public static final int MAX_HISTORY_SIZE = 50;
 }
