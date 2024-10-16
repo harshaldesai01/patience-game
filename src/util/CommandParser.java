@@ -63,7 +63,7 @@ public class CommandParser {
      * @param message exception message
      */
     public void displayError(String message) {
-        System.out.println("Error while parsing command: " + message);
+        System.out.println("Invalid command: " + message);
     }
 
     /**
