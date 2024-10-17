@@ -23,7 +23,8 @@ import java.util.Stack;
 import static util.CommonConstants.UNCOVERED_PILE;
 
 /**
- * Service class used to play the game
+ * The GameService class manages the core game logic, including card movements,
+ * score updates, and checking game state. It handles commands like drawing and moving cards.
  */
 public class GameService {
     private final StockPile stockPile;
