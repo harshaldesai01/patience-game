@@ -7,7 +7,7 @@ public final class CommonConstants {
     public static final String QUIT_COMMAND = "Q";
     public static final String DRAW_COMMAND = "D";
     public static final String UNCOVERED_PILE = "P";
-    public static final String WELCOME_MESSAGE = "Welcome to the Patience Game! Enter your commands (Q to quit):";
+    public static final String WELCOME_MESSAGE = "Welcome to the Patience Game!";
     public static final String QUIT_MESSAGE = "You've quit the game. Thanks for playing!";
     public static final String GAME_WON_MESSAGE = "CONGRATULATIONS! YOU WON THE GAME!";
 
