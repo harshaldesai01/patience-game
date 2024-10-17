@@ -128,11 +128,11 @@ public class GameService {
 
         if(targetPile.canAddCard(cardsToMove.peek())){
             moveCardsToTargetPile(targetPile, cardsToMove, sourcePile);
+            moveCount++;
         } else {
             revertCardMove(sourcePile, cardsToMove);
             throw new InvalidMoveException("Move not possible! Try another move.");
         }
-        moveCount++;
     }
 
     /**
